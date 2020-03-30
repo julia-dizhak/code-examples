@@ -34,12 +34,12 @@ What are the values of `a` and `b` after it runs?
  }
 ```
 Next function duplicates a spreadsheet.
-It trows an error if the original spreadsheet isn't saved.
+It throws an error if the original spreadsheet isn't saved.
 It prepends "Copy of" to the new spreadsheet's title.
 
 <details>
-  <summary>What did the function also accidentaly change?</summary>
- 
+  <summary>What did the function accidentaly change as well ?</summary>
+  This function also accidentely changes the title of original spreadsheet.
 </details>
 
 
