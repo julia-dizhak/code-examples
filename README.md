@@ -1,4 +1,5 @@
-# JavaScript tricky (and simple) questions
+# Learning to code by JavaScript 
+I use this repo to track examples of tricky JS code, which will help me to imrove my knowledges.
 
 ## See examples below 
 
