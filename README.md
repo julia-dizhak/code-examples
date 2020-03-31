@@ -76,7 +76,7 @@ const obj = {
 
 ### Read next code
 ```
-What will be in console
+What will be in console?
 [] + {} 
 [] + []
 ```
@@ -84,6 +84,7 @@ What will be in console
   <summary>Explanation</summary>
   You can only add numbers and strings, all other values will be converted to either one of those types.
   The plus operator performs three kinds of conversion: It converts values to primitives, numbers and strings.
+  
   <pre>
    > [] + [] -> ''
     [].toString() -> ''
@@ -92,8 +93,7 @@ What will be in console
      '[object Object]'
      String({}) -> '[object Object]'
   </pre> 
+  
   Objects are converted to either string (if the other operand is a string) or number (otherwise). If you want to concatenate   arrays, you need to use a method Array.prototype.concat(), for example.
   There is no built-in way in JS to 'concatenate' (merge) objects -lodash
 </details>
-
-
