@@ -71,7 +71,14 @@ const obj = {
 ```
 <details>
   <summary>What will return obj.c?</summary>
-  undefined
+  It will return undefined. 
+  Because of prototype inheritance.
+  Is `c` own property on `obj`? No, check its prototype.
+  Is there a 'c' own property on obj.[[Prototype]]? is null, stop searching
+  no property found, return undefined.
+  
+  But chain could be obj.[[Prototype]].[[Prototype]]
+  and so on obj.[[Prototype]].[[Prototype]].[[Prototype]] 
 </details>
 
 ### Read next code
