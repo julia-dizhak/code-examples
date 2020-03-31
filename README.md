@@ -41,25 +41,25 @@ It prepends "Copy of" to the new spreadsheet's title.
 <details>
   <summary>What did the function accidentaly change as well ?</summary>
   This function also accidentely changes the title of original spreadsheet.
- ```
-  const original = {
-   created: '',
-   author: 'Test',
-   cells: '',
-   metadata: {
-     title: 'one test title'
-   }
- }
- 
- duplicateSpreadsheet(original)
- 
- {
-   created: 1585570108872
-   author: "Test"
-   cells: ""
-   metadata: {title: "Copy of one test title"}
- }  
- ```
+  <code>
+   const original = {
+    created: '',
+    author: 'Test',
+    cells: '',
+    metadata: {
+      title: 'one test title'
+    }
+  }
+
+  duplicateSpreadsheet(original)
+
+  {
+    created: 1585570108872
+    author: "Test"
+    cells: ""
+    metadata: {title: "Copy of one test title"}
+  }  
+ </code>
 </details>
 
 ### Read next code
