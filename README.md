@@ -119,17 +119,18 @@ What will be in console?
  }
 ```
 <details>
-  <summary>What happens? What you will see in console</summary>
+  <summary>What happens? What you will see in console?</summary>
+ 
    first case, test1() - function declaration. JS interpreter moves function declaration to the top of their containing scope
  (this called hoisting). That's why you can use function declaration before you declare it.
-  <code>
+  <pre>
     in console // test1
-  </code> 
+  </pre> 
  
    in the second case, test2() declared as function expression, which are not hoisted, you can't use before define them ->    function doesn't exist
-   <code>
+   <pre>
      const/let - cannot access 'test2' before initialization
      var - test2 is not a function
-   </code>
+   </pre>
 </details> 
 
