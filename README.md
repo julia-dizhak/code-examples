@@ -104,3 +104,32 @@ What will be in console?
   Objects are converted to either string (if the other operand is a string) or number (otherwise). If you want to concatenate   arrays, you need to use a method Array.prototype.concat(), for example.
   There is no built-in way in JS to 'concatenate' (merge) objects -lodash
 </details>
+
+### Read next code
+```
+ test1();
+ test2(); 
+ 
+ function test1() {
+   console.log('test1');
+ }
+ 
+ var test2 = function() {
+   console.log('test2');
+ }
+```
+<details>
+  <summary>What happens? What you will see in console</summary>
+   first case, test1() - function declaration. JS interpreter moves function declaration to the top of their containing scope
+ (this called hoisting). That's why you can use function declaration before you declare it.
+  <code>
+    in console // test1
+  </code> 
+ 
+   in the second case, test2() declared as function expression, which are not hoisted, you can't use before define them ->    function doesn't exist
+   <code>
+     const/let - cannot access 'test2' before initialization
+     var - test2 is not a function
+   </code>
+</details> 
+
