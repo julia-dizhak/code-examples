@@ -155,16 +155,16 @@ What will be in console?
   obj.test4() //  ?
 ```
 <details>
-  <summary>What happens after running `obj.test3()`? `obj.test4()`?</summary>
+  <summary>What happens after running obj.test3()? obj.test4()?</summary>
  
-   Unlike regular functions, arrows functions do not have their own this (does not bind its own this)
-   The value of this inside arrow functions is not dependent on how they are invoked or how they are defined.
+   Unlike regular functions, arrows functions do not have their own this (does not bind its own this).
+   The value of this inside arrow functions is not dependent on how they are invoked.
    It depends only on its enclosing context.
   <pre>
     in console // -> Window {parent: Window, ...}
   </pre> 
  
-   In the second case, test4() is function declaration. Regular function defines its own this or context depending on their invocation, this -> object itself
+   In the second case, test4() is function declaration. Regular function defines its own this or context depending on their invocation, this -> object itself.
    
    <pre>
      -> // {test3: ƒ, test4: ƒ}     
