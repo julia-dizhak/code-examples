@@ -127,9 +127,46 @@ What will be in console?
     in console -> test1
   </pre> 
  
-   in the second case, test2() declared as function expression, which are not hoisted, you can't use before define them ->    function doesn't exist
+   in the second case, test2 declared as function expression. The variable name will be hoisted, but you can't access until JS
+   execution encounters its definition. You can't use before define them -> function doesn't exist
    <pre>
-      var - test2 is not a function
+     var - test2 is not a function
      const/let - cannot access 'test2' before initialization
+   </pre>
+</details> 
+
+
+### Read next code
+```
+  const  obj = {};
+
+  const test3 = () => {
+    console.log(this);
+  }
+
+  function test4() {
+    console.log(this); 
+  }
+
+  obj.test3 = test3;
+  obj.test4 = test4;
+
+  obj.test3() // ?
+  obj.test4() //  ?
+```
+<details>
+  <summary>What happens after running `obj.test3()`? `obj.test4()`?</summary>
+ 
+   Unlike regular functions, arrows functions do not have their own this (does not bind its own this)
+   The value of this inside arrow functions is not dependent on how they are invoked or how they are defined.
+   It depends only on its enclosing context.
+  <pre>
+    in console // -> Window {parent: Window, ...}
+  </pre> 
+ 
+   In the second case, test4() is function declaration. Regular function defines its own this or context depending on their invocation, this -> object itself
+   
+   <pre>
+     -> // {test3: ƒ, test4: ƒ}     
    </pre>
 </details> 
