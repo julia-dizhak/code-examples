@@ -155,7 +155,7 @@ What will be in console?
   obj.test4() //  ?
 ```
 <details>
-  <summary>What happens after running <pre>obj.test3()? obj.test4()</pre>?</summary>
+  <summary>What happens after running obj.test3()? obj.test4()?</summary>
  
    Unlike regular functions, arrows functions do not have their own `this` (does not bind its own this).
    The value of `this` inside arrow functions is not dependent on how they are invoked.
@@ -194,15 +194,14 @@ What will be in console?
   console.log(b.val); 
 ```  
 <details>
-  <summary>What will be value for <pre>a.val, b.val</pre> at the end?</summary>
+  <summary>What will be value for a.val, b.val at the end?</summary>
    The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
    
    First log will be display b.val -> 5 because of inheritance  
    <pre>
     b.__proto__ -> {val: 5}
    </pre>
-  Because object is refence type second log will display -> 10
-  And last values are next
+  Because object is refence type second log will display -> 10. At the end you will see
   <pre>
    a.val = 10
    b.val = 15
