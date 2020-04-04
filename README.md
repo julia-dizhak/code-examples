@@ -155,7 +155,7 @@ What will be in console?
   obj.test4() //  ?
 ```
 <details>
-  <summary>What happens after running obj.test3()? obj.test4()?</summary>
+  <summary>What happens after running obj.test3(), obj.test4() ?</summary>
  
    Unlike regular functions, arrows functions do not have their own `this` (does not bind its own this).
    The value of `this` inside arrow functions is not dependent on how they are invoked.
@@ -173,7 +173,7 @@ What will be in console?
    // -> obj {test3: ƒ}
   </pre>
  
-   In the second case, test4() is function declaration. Regular function defines its own this or context depending on their invocation, this -> object itself.
+   In the second case, `test4()` is function declaration. Regular function defines its own this or context depending on their invocation, in our case, `this = object itself`.
    
    <pre>
      -> // {test3: ƒ, test4: ƒ}     
@@ -197,11 +197,11 @@ What will be in console?
   <summary>What will be value for a.val, b.val at the end?</summary>
    The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
    
-   First log will be display b.val -> 5 because of inheritance  
+   First log will be display `b.val -> 5` because of inheritance  
    <pre>
     b.__proto__ -> {val: 5}
    </pre>
-  Because object is refence type second log will display -> 10. At the end you will see
+  Because object is refence type, second log will show `10`. And final log is
   <pre>
    a.val = 10
    b.val = 15
