@@ -105,7 +105,7 @@ What will be in console?
   There is no built-in way in JS to 'concatenate' (merge) objects -lodash
 </details>
 
-### Read next code
+### Function declaration vs function expression: read next code
 ```
  test1();
  test2(); 
@@ -136,7 +136,7 @@ What will be in console?
 </details> 
 
 
-### Read next code
+### Arrow functions: read next code
 ```
   const  obj = {};
 
@@ -155,18 +155,57 @@ What will be in console?
   obj.test4() //  ?
 ```
 <details>
-  <summary>What happens after running obj.test3()? obj.test4()?</summary>
+  <summary>What happens after running <pre>obj.test3()? obj.test4()</pre>?</summary>
  
-   Unlike regular functions, arrows functions do not have their own this (does not bind its own this).
-   The value of this inside arrow functions is not dependent on how they are invoked.
-   It depends only on its enclosing context.
+   Unlike regular functions, arrows functions do not have their own `this` (does not bind its own this).
+   The value of `this` inside arrow functions is not dependent on how they are invoked.
+   It depends only on its `enclosing context` (literal scope).
   <pre>
     in console // -> Window {parent: Window, ...}
   </pre> 
+  But if test3 will be define as obj method, then `this` will be `obj` itself.
+  <pre>
+   const obj = {
+     test3: () => {
+      console.log(this);
+     }
+   }
+   // -> obj {test3: ƒ}
+  </pre>
  
    In the second case, test4() is function declaration. Regular function defines its own this or context depending on their invocation, this -> object itself.
    
    <pre>
      -> // {test3: ƒ, test4: ƒ}     
    </pre>
+</details> 
+
+### Object.create: read next code
+```
+  const a = { val: 5 }
+  const b = Object.create(a);
+  console.log(b.val); // ?
+  
+  a.val = 10;
+  console.log(b.val); // ?
+ 
+  b.val = 15;
+  console.log(a.val);
+  console.log(b.val); 
+```  
+<details>
+  <summary>What will be value for <pre>a.val, b.val</pre> at the end?</summary>
+   The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
+   
+   First log will be display b.val -> 5 because of inheritance  
+   <pre>
+    b.__proto__ -> {val: 5}
+   </pre>
+  Because object is refence type second log will display -> 10
+  And last values are next
+  <pre>
+   a.val = 10
+   b.val = 15
+  </pre>
+ 
 </details> 
