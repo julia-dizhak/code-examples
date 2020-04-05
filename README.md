@@ -210,7 +210,7 @@ What will be in console?
 </details> 
 
 
-### By references VS by value: read next code
+### By references vs by value: read next code
 ```
  let a = {};
 
@@ -222,18 +222,30 @@ What will be in console?
 ```
 
 <details>
-  <summary>What console will display for value a?</summary>
-  Function argument is local variable, in our case `a`.
-  We give an empty object In function
-
+  <summary>What will be value a?</summary>
+  Function argument is local variable.
+  When we overwrite a local variable for IIFE or function expression, it doesn't reflect on an outer scope.
+  
    <pre>
-   ...
-   (function b(a) {
-     a.a = 10; // -> {a: 10}
-     a = null; 
-     console.log('a', a); // a is local parameter -> null
-   })(a);
-   console.log('a', a); -> {a: 10}
+    let a = {};
+
+    (function b(a) {
+      a.a = 10; // -> {a: 10} because a is object - reference type
+      a = null; // overwrite a local variable
+      console.log('a', a); // local a is null, but not the outside
+    })(a);
+    console.log('a', a); -> {a: 10}
+   </pre>
+   
+   Example with function expression
+   <pre>
+     var a = 5;
+     function b(a) {
+      a = 9;
+      console.log('a local', a) -> 9
+    }
+    b(a);
+    console.log('a outer', a) -> 5
    </pre>
  
 </details> 
