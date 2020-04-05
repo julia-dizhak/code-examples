@@ -184,17 +184,18 @@ What will be in console?
 ```
   const a = { val: 5 }
   const b = Object.create(a);
-  console.log(b.val); // ?
+  console.log(b.val); 
   
   a.val = 10;
-  console.log(b.val); // ?
+  console.log(b.val); 
  
   b.val = 15;
   console.log(a.val);
   console.log(b.val); 
 ```  
+
 <details>
-  <summary>What will be value for a.val, b.val at the end?</summary>
+  <summary>What console will display a.val, b.val?</summary>
    The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
    
    First log will be display `b.val -> 5` because of inheritance  
@@ -206,5 +207,33 @@ What will be in console?
    a.val = 10
    b.val = 15
   </pre>
+</details> 
+
+
+### By references VS by value: read next code
+```
+ let a = {};
+
+ (function b(a) {
+   a.a = 10;
+   a = null;
+ })(a);
+ console.log('a', a);
+```
+
+<details>
+  <summary>What console will display for value a?</summary>
+  Function argument is local variable, in our case `a`.
+  We give an empty object In function
+
+   <pre>
+   ...
+   (function b(a) {
+     a.a = 10; // -> {a: 10}
+     a = null; 
+     console.log('a', a); // a is local parameter -> null
+   })(a);
+   console.log('a', a); -> {a: 10}
+   </pre>
  
 </details> 
