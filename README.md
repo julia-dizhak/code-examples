@@ -265,7 +265,7 @@ What will be in console?
 <details>
   <summary>You need to update for loop and get brr as equal to [1,2,3]</summary>
   Can check operator `continue` or left one cycle iteration.
-
+ 
    <pre>
     for (let i = 0; i < arr.length; i++) {
      // if (arr[i] === 42) continue;
