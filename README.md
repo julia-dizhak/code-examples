@@ -249,3 +249,30 @@ What will be in console?
    </pre>
  
 </details> 
+
+
+### read next code
+```
+ let arr = [1, 2, 42, 3];
+ let brr = [];
+
+ for (let i = 0; i < arr.length; i++) {
+  if (arr[i] === 42) {}
+  brr.push(arr[i]);
+}
+```
+
+<details>
+  <summary>You need to update for loop and get brr as equal to [1,2,3]</summary>
+  Can check operator `continue` or left one cycle iteration.
+
+   <pre>
+    for (let i = 0; i < arr.length; i++) {
+     // if (arr[i] === 42) continue;
+     if (arr[i] === 42) i++;
+
+     brr.push(arr[i]);
+    }
+   </pre>
+  
+</details> 
