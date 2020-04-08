@@ -251,7 +251,7 @@ What will be in console?
 </details> 
 
 
-### read next code
+### Loop: read next code
 ```
  let arr = [1, 2, 42, 3];
  let brr = [];
@@ -276,3 +276,20 @@ What will be in console?
    </pre>
   
 </details> 
+
+
+### By reference: read next code
+```
+ let arr = [1,2]
+ let brr = arr;
+ brr = [42, 43];
+ console.log(arr[0]);
+```
+<details>
+  <summary>What will be displayed in console</summary>
+  Because array is reference type
+   <pre>
+    // arr[0] -> 1
+   </pre>
+  
+</details>
