@@ -3,6 +3,21 @@ I use this repo to track examples of tricky JS code, which will help me to imrov
 
 ## See examples below 
 
+<details>
+  <summary>Operator <code>typeof</code></summary>
+  
+  <details>
+    <summary>What will return next line of code <code>typeof(typeof(value))</code></summary>
+    ```
+       typeof(typeof(value))
+    ```
+ Here’s why. We know typeof(value) always gives us one of the predetermined strings: "undefined", "boolean", "number", and so on. Predetermined strings.
+
+So typeof any of them is "string". Because they’re strings!
+  
+  </details>
+</details>
+
 ### Read this code:
 What are the values of `a` and `b` after it runs?
 ```
