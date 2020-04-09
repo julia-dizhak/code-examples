@@ -1,13 +1,18 @@
 # Learning to code by JavaScript 
 I use this repo to track examples of tricky JS code, which will help me to imrove my knowledges.
 
-## Installation
-
 ## See examples below 
 
+## Operator typeof 
+
+### Read this code:
+test?
+```
+ test
+```
 <details>
-  <summary>Operator <code>typeof</code></summary>
-  
+  <summary>Correct Answer</summary>
+  test
 </details>
 
 ### Read this code:
