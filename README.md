@@ -1,10 +1,12 @@
 # Learning to code by JavaScript 
 I use this repo to track examples of tricky JS code, which will help me to imrove my knowledges.
 
+## Installation
+
 ## See examples below 
 
 <details>
-  <summary><h2>Operator <code>typeof</code></h2></summary>
+  <summary>Operator <code>typeof</code></summary>
   
 </details>
 
