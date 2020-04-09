@@ -4,13 +4,13 @@ See examples of code and answers below
 
 ## Operator typeof 
 
-### Read this code:
-What will return next line of code?
+### What will return next line of code?
 ```
  typeof(typeof(value))
 ```
 <details>
   <summary>Correct Answer</summary>
+  
   `typeof(typeof(value))` is always "string".
   
   We know `typeof(value)` always gives us one of the predetermined strings: "undefined", "boolean", "number", and so on. 
