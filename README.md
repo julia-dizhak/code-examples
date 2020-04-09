@@ -1,18 +1,20 @@
 # Learning to code by JavaScript 
 I use this repo to track examples of tricky JS code, which will help me to imrove my knowledges.
-
-## See examples below 
+See examples of code and answers below 
 
 ## Operator typeof 
 
 ### Read this code:
-test?
+What will return next line of code?
 ```
- test
+ typeof(typeof(value))
 ```
 <details>
   <summary>Correct Answer</summary>
-  test
+  `typeof(typeof(value))` is always "string".
+  
+  We know `typeof(value)` always gives us one of the predetermined strings: "undefined", "boolean", "number", and so on. 
+  So typeof any of them is "string". Because they’re strings!
 </details>
 
 ### Read this code:
