@@ -114,9 +114,29 @@ const obj = {
   and so on obj.[[Prototype]].[[Prototype]].[[Prototype]] 
 </details>
 
-### Read next code
+
+### What will be displayed in console
 ```
-What will be in console?
+ let arr = [1,2]
+ let brr = arr;
+ brr = [42, 43];
+ console.log(arr[0]);
+```
+<details>
+  <summary>Correct answer</summary>
+  Because array is reference type
+   <pre>
+    // arr[0] -> 1
+   </pre>
+  
+</details>
+
+
+###################################################################
+## Operator '+' (concatenation)
+
+### What will be in console?
+```
 [] + {} 
 [] + []
 ```
@@ -138,7 +158,11 @@ What will be in console?
   There is no built-in way in JS to 'concatenate' (merge) objects -lodash
 </details>
 
-### Function declaration vs function expression: read next code
+
+###################################################################
+## Function declaration vs function expression
+
+### What happens? What you will see in console?
 ```
  test1();
  test2(); 
@@ -152,7 +176,7 @@ What will be in console?
  }
 ```
 <details>
-  <summary>What happens? What you will see in console?</summary>
+  <summary>Correct answer</summary>
  
    first case, test1() - function declaration. JS interpreter moves function declaration to the top of their containing scope
  (hoisting). That's why you can use function declaration before you declare it.
@@ -311,18 +335,4 @@ What will be in console?
 </details> 
 
 
-### By reference: read next code
-```
- let arr = [1,2]
- let brr = arr;
- brr = [42, 43];
- console.log(arr[0]);
-```
-<details>
-  <summary>What will be displayed in console</summary>
-  Because array is reference type
-   <pre>
-    // arr[0] -> 1
-   </pre>
-  
-</details>
+
