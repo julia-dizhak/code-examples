@@ -208,6 +208,7 @@ const obj = {
   <summary>Explanation</summary>
   Declare a variable called x. Make a wire for the x variable. Assign to x the value of 10. Point x’s wire to the value 10.
  
+  
   Declare a variable called y. Make a wire for the y variable. Assign to y the value of x.
 
   Evaluate the expression: x. The x expression resulted in the value 10. Therefore, assign to y the value of 10. Point y’s wire to the value 10.
