@@ -17,6 +17,7 @@ See examples of code and answers below
   So typeof any of them is "string". Because they’re strings!
 </details>
 
+
 ########################################################
 ## Primitive types
 
@@ -158,6 +159,42 @@ const obj = {
    a.val = 10
    b.val = 15
   </pre>
+</details> 
+
+###################################################################
+## Variables
+
+### Does immutability of strings play a role here, and what role does it play? What will be in console?
+```
+ let pet = 'Narwhal';
+ pet = 'The Kraken';
+ console.log(pet); // ?
+```
+
+<details>
+  <summary>Explanation</summary>
+   The answer is "The Kraken" — immutability of strings doesn’t play a role.
+   Variables are not values.
+   Variables point to values.
+</details> 
+
+
+### Nouns and verbs: read next code
+```
+ function double(x) {
+  x = x * 2;
+ }
+
+ let money = 10;
+ double(money);
+ console.log(money); // ?
+```
+
+<details>
+  <summary>Explanation</summary>
+  If we thought double(money) was passing a variable, we could expect that x = x * 2 would double that variable. 
+  But that’s not how it works. We know that double(money) means “figure out the value of money, and then pass that value to double”. 
+ So the answer is 10.
 </details> 
 
 ###################################################################
