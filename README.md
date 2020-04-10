@@ -197,6 +197,29 @@ const obj = {
  So the answer is 10.
 </details> 
 
+
+### What will be value of y?
+```
+ let x = 10;
+ let y = x;
+ x = 0;
+```
+<details>
+  <summary>Explanation</summary>
+  Declare a variable called x. Make a wire for the x variable. Assign to x the value of 10. Point x’s wire to the value 10.
+ 
+  Declare a variable called y. Make a wire for the y variable. Assign to y the value of x.
+
+  Evaluate the expression: x. The x expression resulted in the value 10. Therefore, assign to y the value of 10. Point y’s wire to the value 10.
+ 
+  Assign to x the value of 0. Point x’s wire to the value 0.
+ 
+ `At the end, the x variable points to the value 0, and the y variable points to the value 10.`
+</details> 
+
+
+
+
 ###################################################################
 ## Operator '+' (concatenation)
 
