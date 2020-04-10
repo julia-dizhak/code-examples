@@ -17,8 +17,10 @@ See examples of code and answers below
   So typeof any of them is "string". Because they’re strings!
 </details>
 
-### Read this code:
-What are the values of `a` and `b` after it runs?
+########################################################
+## Primitive types
+
+### What are the values of `a` and `b` after it runs?
 ```
  let a = 10; // declare a variable called a -> set it to 10
  let b = a; // declare a variable called b -> set it to a; a is 10; so b is 10 too
@@ -28,6 +30,23 @@ What are the values of `a` and `b` after it runs?
   <summary>Correct Answer</summary>
   a is 0 now, and b is 10.
 </details>
+
+### What do you expect it to do?
+```
+let reaction = 'yikes';
+reaction[0] = 'l';
+console.log(reaction);
+```
+<details>
+  <summary>Correct Answer</summary>
+  This code will either print "yikes" or throw an error depending on whether you are in strict mode. 
+  It will never print "likes" -> yikes.
+</details>
+
+
+
+###################################################################
+## References types
 
 ### Read next code
 ```
