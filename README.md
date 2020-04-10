@@ -95,7 +95,7 @@ It prepends "Copy of" to the new spreadsheet's title.
  </code>
 </details>
 
-### Read next code
+### What will return obj.c?
 ```
 const obj = {
  a: 1, 
@@ -103,7 +103,7 @@ const obj = {
 }
 ```
 <details>
-  <summary>What will return obj.c?</summary>
+  <summary>Correct answer</summary>
   It will return undefined. 
   Because of prototype inheritance.
   Is `c` own property on `obj`? No, check its prototype.
@@ -115,7 +115,7 @@ const obj = {
 </details>
 
 
-### What will be displayed in console
+### What will be displayed in console?
 ```
  let arr = [1,2]
  let brr = arr;
@@ -131,6 +131,34 @@ const obj = {
   
 </details>
 
+### Object.create: read next code
+```
+  const a = { val: 5 }
+  const b = Object.create(a);
+  console.log(b.val); 
+  
+  a.val = 10;
+  console.log(b.val); 
+ 
+  b.val = 15;
+  console.log(a.val);
+  console.log(b.val); 
+```  
+
+<details>
+  <summary>What console will display a.val, b.val?</summary>
+   The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
+   
+   First log will be display `b.val -> 5` because of inheritance  
+   <pre>
+    b.__proto__ -> {val: 5}
+   </pre>
+  Because object is refence type, second log will show `10`. And final log is
+  <pre>
+   a.val = 10
+   b.val = 15
+  </pre>
+</details> 
 
 ###################################################################
 ## Operator '+' (concatenation)
@@ -193,7 +221,10 @@ const obj = {
 </details> 
 
 
-### Arrow functions: read next code
+###################################################################
+## Arrow functions
+
+### What happens after running obj.test3(), obj.test4() ?
 ```
   const  obj = {};
 
@@ -212,7 +243,7 @@ const obj = {
   obj.test4() //  ?
 ```
 <details>
-  <summary>What happens after running obj.test3(), obj.test4() ?</summary>
+  <summary>Correct answer</summary>
  
    Unlike regular functions, arrows functions do not have their own `this` (does not bind its own this).
    The value of `this` inside arrow functions is not dependent on how they are invoked.
@@ -237,37 +268,11 @@ const obj = {
    </pre>
 </details> 
 
-### Object.create: read next code
-```
-  const a = { val: 5 }
-  const b = Object.create(a);
-  console.log(b.val); 
-  
-  a.val = 10;
-  console.log(b.val); 
- 
-  b.val = 15;
-  console.log(a.val);
-  console.log(b.val); 
-```  
 
-<details>
-  <summary>What console will display a.val, b.val?</summary>
-   The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
-   
-   First log will be display `b.val -> 5` because of inheritance  
-   <pre>
-    b.__proto__ -> {val: 5}
-   </pre>
-  Because object is refence type, second log will show `10`. And final log is
-  <pre>
-   a.val = 10
-   b.val = 15
-  </pre>
-</details> 
+###################################################################
+## By references vs by value
 
-
-### By references vs by value: read next code
+### What will be value a?
 ```
  let a = {};
 
@@ -279,7 +284,7 @@ const obj = {
 ```
 
 <details>
-  <summary>What will be value a?</summary>
+  <summary>Correct answer</summary>
   Function argument is local variable.
   When we overwrite a local variable for IIFE or function expression, it doesn't reflect on an outer scope.
   
@@ -308,7 +313,10 @@ const obj = {
 </details> 
 
 
-### Loop: read next code
+###################################################################
+## Loop
+
+### You need to update for loop and get brr as equal to [1,2,3]
 ```
  let arr = [1, 2, 42, 3];
  let brr = [];
@@ -320,7 +328,7 @@ const obj = {
 ```
 
 <details>
-  <summary>You need to update for loop and get brr as equal to [1,2,3]</summary>
+  <summary>Correct answer</summary>
   Can check operator `continue` or left one cycle iteration.
  
    <pre>
