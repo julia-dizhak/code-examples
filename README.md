@@ -405,7 +405,7 @@ const obj = {
 
 ### parseInt and .map
 ```
- [2,2,2,2].map(parseInt);
+ [2,2,2,2].map(parseInt)
 ```
 
 <details>
@@ -413,10 +413,10 @@ const obj = {
  
   The parseInt() function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems).
   ```parseInt(x, base)```
-  Method map has 2 arguments: element and index
+  As well method map has 2 arguments: element and index.
   
    <pre>
-    [2,2,2,2].map(parseInt) = 
+    [2,2,2,2].map(parseInt) ->
     
     [2,2,2,2].map((item, index) => {
         parseInt(item, index)
@@ -424,7 +424,9 @@ const obj = {
     }
     
     parseInt(2, 0) - 10th numeral system => equal 2
-    
+    parseInt(2, 1) - 1th numeral system => equal NaN
+    parseInt(2, 2) - 2th numeral system => equal NaN
+    parseInt(2, 3) - 3th numeral system => equal 2
    </pre>
 </details> 
 
