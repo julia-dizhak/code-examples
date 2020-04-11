@@ -400,7 +400,32 @@ const obj = {
      brr.push(arr[i]);
     }
    </pre>
+</details> 
+
+
+### parseInt and .map
+```
+ [2,2,2,2].map(parseInt);
+```
+
+<details>
+  <summary>Correct answer</summary>
+ 
+  The parseInt() function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems).
+  ```parseInt(x, base)```
+  Method map has 2 arguments: element and index
   
+   <pre>
+    [2,2,2,2].map(parseInt) = 
+    
+    [2,2,2,2].map((item, index) => {
+        parseInt(item, index)
+      })
+    }
+    
+    parseInt(2, 0) - 10th numeral system => equal 2
+    
+   </pre>
 </details> 
 
 
