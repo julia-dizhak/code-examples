@@ -427,6 +427,8 @@ const obj = {
     parseInt(2, 1) - 1th numeral system => equal NaN
     parseInt(2, 2) - 2th numeral system => equal NaN
     parseInt(2, 3) - 3th numeral system => equal 2
+    
+    Answer is [2, NaN, NaN, 2]
    </pre>
 </details> 
 
