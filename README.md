@@ -410,10 +410,11 @@ const obj = {
 
 <details>
   <summary>Correct answer</summary>
- 
-  The parseInt() function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems).
+  It is common to use the callback with one argument. 
+  The parseInt() function parses a string argument and takes 2 arguments and returns an integer of the specified radix (the base in mathematical numeral systems).
   ```parseInt(x, base)```
-  As well method map has 2 arguments: element and index.
+  
+  The map() method creates a new array populated with the results of calling a provided function on every element in calling array. Array.prototype.map passes 3 arguments: element and index, the array.
   
    <pre>
     [2,2,2,2].map(parseInt) ->
