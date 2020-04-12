@@ -205,12 +205,13 @@ const obj = {
 
 <details>
   <summary>Explanation</summary>
-  This code produce an error.
+ 
+  This code produce an error `Uncaught SyntaxError: Invalid left-hand side in assignment`.
   It is error because the left side of assignament must always be 'wire'.
   Variables are wires, so they can appear on the left side.
   
   A literal like `null` is not a 'wire',
-  so trying to assign something to it is meaningless
+  so trying to assign something to it is meaningless.
 </details> 
 
 
