@@ -32,6 +32,7 @@ See examples of code and answers below
   a is 0 now, and b is 10.
 </details>
 
+
 ### What do you expect it to do?
 ```
 let reaction = 'yikes';
@@ -44,6 +45,19 @@ console.log(reaction);
   It will never print "likes" -> yikes.
 </details>
 
+
+### What will console display?
+```
+let answer = true
+answer.opposite = false
+console.log(answer.opposite())
+```
+<details>
+  <summary>Correct Answer</summary>
+  Booleans are primitive. And primitive values are immutable. We can’t change them — and setting a property on a value is a change.
+
+ If our code runs in the strict mode, assigning a property on a primitive value would lead to an error. Otherwise, it will silently do nothing. In either case, we can’t set a property on a boolean value like true.
+</details>
 
 
 ###################################################################
