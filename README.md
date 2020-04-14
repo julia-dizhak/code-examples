@@ -496,3 +496,49 @@ let bound2 = addToThis.bind(obj2);
 bound1(1,2,3) // -> sum is 7
 bound2(1,2,3) // -> sum is 8
 ```
+
+## Class [(code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/class.md)
+
+### Defining a Class
+
+ES5 syntax
+
+```
+// constructor
+function Building(floors) {
+  // just create this as an empty {}
+  this.what = 'building'
+  this.floors = floors;
+
+  // this.countFloors =  ...
+  // it's not a good practise because the same function creates for each object
+
+  // return this behind a sciene
+}
+
+// prototype is just an object
+Building.prototype.countFloors = function() {
+  if (this.floors >= 10) {
+    console.log('I have', this.floors, 'floors')
+  }
+}
+
+let myHouse = new Building(2);
+myHouse.countFloors(); // ->
+
+let officeBuildg = new Building(12);
+officeBuildg.countFloors(); // ->
+
+
+let whateverHouse = {}
+whateverHouse.countFloors() // - ?
+// you can not call this method, becuase it doesn' exist
+// you can run only countFloors for instanse created from Building
+
+```
+
+
+ES6 syntax
+```
+  ...
+```
