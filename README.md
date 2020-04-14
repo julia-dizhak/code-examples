@@ -488,11 +488,11 @@ let addToThis = function(a,b,c) {
   return sum;
 }
 
-addToThis.call(obj1, 1, 2, 3) // sum is 7
-addToThis.apply(obj2, [1,2,3]) // sum is 8
+addToThis.call(obj1, 1, 2, 3) // -> sum is 7
+addToThis.apply(obj2, [1,2,3]) // -> sum is 8
 
 let bound1 = addToThis.bind(obj1);
 let bound2 = addToThis.bind(obj2);
-bound1(1,2,3) // sum is 7
-bound2(1,2,3) // sum is 8
+bound1(1,2,3) // -> sum is 7
+bound2(1,2,3) // -> sum is 8
 ```
