@@ -32,16 +32,14 @@
 
     In this case closure would be created and i always would be last iteration in array, so i=10. 
     You can use let, that's why each iteration new variable i would be created.
+    
     <pre>
-        var funcs = [];
+        ...
         for (let i = 0; i < 10; i++) {
             funcs.push(function() {
                 console.log(i)
             })
         }
-
-        for (var j = 0; j < 3; j++) {
-            funcs[j]();
-        }
+        ...
     </pre>
 </details>
