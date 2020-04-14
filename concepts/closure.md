@@ -21,10 +21,10 @@
 
     The array funcs has a push callback function.
 
-    ```funcs[j]()`` will call this function to print the i in the console.
-    ```function() {console.log(i)}``` is an expression which evaluates to a value that is function that logs i.
-
-    ```funcs.push``` is a function that adds a value to an array.
+    funcs[j]() will call this function to print the i in the console.
+    function() { console.log(i) } is an expression which evaluates to a value that is function that logs i.
+    
+    funcs.push is a function that adds a value to an array.
 
     Putting () after a function will call that function.
 
