@@ -1,3 +1,5 @@
+[<< back](https://github.com/julia-dizhak/code-examples/edit/master/README.md)
+
 ### Array with callback function
 ```
     var funcs = [];
@@ -28,9 +30,7 @@
 
     Putting () after a function will call that function.
 
-    In this case closure would be created and i always would be last iteration in array, so 10.
-
-    You can use let, that's why each iteration new variable would be created
+    In this case closure would be created and i always would be last iteration in array, so i=10. You can use let, that's why each iteration new variable would be created
 
     <pre>
         var funcs = [];
