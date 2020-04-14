@@ -1,8 +1,9 @@
-# Learning to code by JavaScript 
+# Learning to code by JavaScript
 I use this repo to track examples of tricky JS code, which will help me to imrove my knowledges.
-See examples of code and answers below 
+See examples of code and answers or explanation below.
+Code examples divided by topics.
 
-## Operator typeof 
+## Operator typeof
 
 ### What will return next line of code?
 ```
@@ -10,10 +11,10 @@ See examples of code and answers below
 ```
 <details>
   <summary>Correct Answer</summary>
-  
+
   `typeof(typeof(value))` is always "string".
-  
-  We know `typeof(value)` always gives us one of the predetermined strings: "undefined", "boolean", "number", and so on. 
+
+  We know `typeof(value)` always gives us one of the predetermined strings: "undefined", "boolean", "number", and so on.
   So typeof any of them is "string". Because they’re strings!
 </details>
 
@@ -41,7 +42,7 @@ console.log(reaction);
 ```
 <details>
   <summary>Correct Answer</summary>
-  This code will either print "yikes" or throw an error depending on whether you are in strict mode. 
+  This code will either print "yikes" or throw an error depending on whether you are in strict mode.
   It will never print "likes" -> yikes.
 </details>
 
@@ -68,17 +69,17 @@ console.log(answer.opposite())
  function duplicateSpreadsheet(original) {
   if (original.hasPendingChanges) {
    throw new Error('you need to save the file before you can duplicate it')
-  } 
-  
+  }
+
   let copy = {
     created: Date.now(),
     author: original.author,
     cells: original.cells,
     metadata: original.metadata,
   };
-  
+
   copy.metadata.title = 'Copy of ' + original.metadata.title;
-  
+
   return copy;
  }
 ```
@@ -106,27 +107,27 @@ It prepends "Copy of" to the new spreadsheet's title.
     author: "Test"
     cells: ""
     metadata: {title: "Copy of one test title"}
-  }  
+  }
  </code>
 </details>
 
 ### What will return obj.c?
 ```
 const obj = {
- a: 1, 
+ a: 1,
  b: 1
 }
 ```
 <details>
   <summary>Correct answer</summary>
-  It will return undefined. 
+  It will return undefined.
   Because of prototype inheritance.
   Is `c` own property on `obj`? No, check its prototype.
   Is there a 'c' own property on obj.[[Prototype]]? is null, stop searching
   no property found, return undefined.
-  
+
   But chain could be obj.[[Prototype]].[[Prototype]]
-  and so on obj.[[Prototype]].[[Prototype]].[[Prototype]] 
+  and so on obj.[[Prototype]].[[Prototype]].[[Prototype]]
 </details>
 
 
@@ -143,28 +144,28 @@ const obj = {
    <pre>
     // arr[0] -> 1
    </pre>
-  
+
 </details>
 
 ### Object.create: read next code
 ```
   const a = { val: 5 }
   const b = Object.create(a);
-  console.log(b.val); 
-  
+  console.log(b.val);
+
   a.val = 10;
-  console.log(b.val); 
- 
+  console.log(b.val);
+
   b.val = 15;
   console.log(a.val);
-  console.log(b.val); 
-```  
+  console.log(b.val);
+```
 
 <details>
   <summary>What console will display a.val, b.val?</summary>
    The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
-   
-   First log will be display `b.val -> 5` because of inheritance  
+
+   First log will be display `b.val -> 5` because of inheritance
    <pre>
     b.__proto__ -> {val: 5}
    </pre>
@@ -173,7 +174,7 @@ const obj = {
    a.val = 10
    b.val = 15
   </pre>
-</details> 
+</details>
 
 ###################################################################
 ## Variables
@@ -190,7 +191,7 @@ const obj = {
    The answer is "The Kraken" — immutability of strings doesn’t play a role.
    Variables are not values.
    Variables point to values.
-</details> 
+</details>
 
 
 ### Nouns and verbs: read next code
@@ -206,10 +207,10 @@ const obj = {
 
 <details>
   <summary>Explanation</summary>
-  If we thought double(money) was passing a variable, we could expect that x = x * 2 would double that variable. 
-  But that’s not how it works. We know that double(money) means “figure out the value of money, and then pass that value to double”. 
+  If we thought double(money) was passing a variable, we could expect that x = x * 2 would double that variable.
+  But that’s not how it works. We know that double(money) means “figure out the value of money, and then pass that value to double”.
  So the answer is 10.
-</details> 
+</details>
 
 ### Assignament
 ```
@@ -219,14 +220,14 @@ const obj = {
 
 <details>
   <summary>Explanation</summary>
- 
+
   This code produce an error `Uncaught SyntaxError: Invalid left-hand side in assignment`.
   It is error because the left side of assignament must always be 'wire'.
   Variables are wires, so they can appear on the left side.
-  
+
   A literal like `null` is not a 'wire',
   so trying to assign something to it is meaningless.
-</details> 
+</details>
 
 
 ### What will be value of y?
@@ -238,16 +239,16 @@ const obj = {
 <details>
   <summary>Explanation</summary>
   Declare a variable called x. Make a wire for the x variable. Assign to x the value of 10. Point x’s wire to the value 10.
- 
-  
+
+
   Declare a variable called y. Make a wire for the y variable. Assign to y the value of x.
 
   Evaluate the expression: x. The x expression resulted in the value 10. Therefore, assign to y the value of 10. Point y’s wire to the value 10.
- 
+
   Assign to x the value of 0. Point x’s wire to the value 0.
- 
+
  `At the end, the x variable points to the value 0, and the y variable points to the value 10.`
-</details> 
+</details>
 
 
 
@@ -257,14 +258,14 @@ const obj = {
 
 ### What will be in console?
 ```
-[] + {} 
+[] + {}
 [] + []
 ```
 <details>
   <summary>Explanation</summary>
   You can only add numbers and strings, all other values will be converted to either one of those types.
   The plus operator performs three kinds of conversion: It converts values to primitives, numbers and strings.
-  
+
   <pre>
    > [] + [] -> ''
     [].toString() -> ''
@@ -272,8 +273,8 @@ const obj = {
    > [] + {}
      '[object Object]'
      String({}) -> '[object Object]'
-  </pre> 
-  
+  </pre>
+
   Objects are converted to either string (if the other operand is a string) or number (otherwise). If you want to concatenate   arrays, you need to use a method Array.prototype.concat(), for example.
   There is no built-in way in JS to 'concatenate' (merge) objects -lodash
 </details>
@@ -285,32 +286,32 @@ const obj = {
 ### What happens? What you will see in console?
 ```
  test1();
- test2(); 
- 
+ test2();
+
  function test1() {
    console.log('test1');
  }
- 
+
  var test2 = function() {
    console.log('test2');
  }
 ```
 <details>
   <summary>Correct answer</summary>
- 
+
    first case, test1() - function declaration. JS interpreter moves function declaration to the top of their containing scope
  (hoisting). That's why you can use function declaration before you declare it.
   <pre>
     in console -> test1
-  </pre> 
- 
+  </pre>
+
    in the second case, test2 declared as function expression. The variable name will be hoisted, but you can't access until JS
    execution encounters its definition. You can't use before define them -> function doesn't exist
    <pre>
      var - test2 is not a function
      const/let - cannot access 'test2' before initialization
    </pre>
-</details> 
+</details>
 
 
 ###################################################################
@@ -325,7 +326,7 @@ const obj = {
   }
 
   function test4() {
-    console.log(this); 
+    console.log(this);
   }
 
   obj.test3 = test3;
@@ -336,13 +337,13 @@ const obj = {
 ```
 <details>
   <summary>Correct answer</summary>
- 
+
    Unlike regular functions, arrows functions do not have their own `this` (does not bind its own this).
    The value of `this` inside arrow functions is not dependent on how they are invoked.
    It depends only on its `enclosing context` (literal scope).
   <pre>
     in console // -> Window {parent: Window, ...}
-  </pre> 
+  </pre>
   But if test3 will be define as obj method, then `this` will be `obj` itself.
   <pre>
    const obj = {
@@ -352,13 +353,13 @@ const obj = {
    }
    // -> obj {test3: ƒ}
   </pre>
- 
+
    In the second case, `test4()` is function declaration. Regular function defines its own this or context depending on their invocation, in our case, `this = object itself`.
-   
+
    <pre>
-     -> // {test3: ƒ, test4: ƒ}     
+     -> // {test3: ƒ, test4: ƒ}
    </pre>
-</details> 
+</details>
 
 
 ###################################################################
@@ -379,7 +380,7 @@ const obj = {
   <summary>Correct answer</summary>
   Function argument is local variable.
   When we overwrite a local variable for IIFE or function expression, it doesn't reflect on an outer scope.
-  
+
    <pre>
     let a = {};
 
@@ -390,7 +391,7 @@ const obj = {
     })(a);
     console.log('a', a); -> {a: 10}
    </pre>
-   
+
    Example with function expression
    <pre>
      var a = 5;
@@ -401,8 +402,8 @@ const obj = {
     b(a);
     console.log('a outer', a) -> 5
    </pre>
- 
-</details> 
+
+</details>
 
 
 ###################################################################
@@ -422,7 +423,7 @@ const obj = {
 <details>
   <summary>Correct answer</summary>
   Can check operator `continue` or left one cycle iteration.
- 
+
    <pre>
     for (let i = 0; i < arr.length; i++) {
      // if (arr[i] === 42) continue;
@@ -431,7 +432,7 @@ const obj = {
      brr.push(arr[i]);
     }
    </pre>
-</details> 
+</details>
 
 
 ### parseInt and .map
@@ -441,26 +442,28 @@ const obj = {
 
 <details>
   <summary>Correct answer</summary>
-  It is common to use the callback with one argument. 
+  It is common to use the callback with one argument.
   The parseInt() function parses a string argument and takes 2 arguments and returns an integer of the specified radix (the base in mathematical numeral systems).
   ```parseInt(x, base)```
-  
+
   The map() method creates a new array populated with the results of calling a provided function on every element in calling array. Array.prototype.map passes 3 arguments: element and index, the array.
-  
+
    <pre>
     [2,2,2,2].map(parseInt) ->
-    
+
     [2,2,2,2].map((item, index) => {
         parseInt(item, index)
       })
     }
-    
+
     parseInt(2, 0) - 10th numeral system => equal 2
     parseInt(2, 1) - 1th numeral system => equal NaN
     parseInt(2, 2) - 2th numeral system => equal NaN
     parseInt(2, 3) - 3th numeral system => equal 2
-    
+
     Answer is [2, NaN, NaN, 2]
    </pre>
-</details> 
+</details>
 
+
+ ## Closure Development (https://github.com/julia-dizhak/code-examples/blob/master/closure.md)
