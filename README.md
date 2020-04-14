@@ -466,4 +466,5 @@ const obj = {
 </details>
 
 
- ## Closure Development (https://github.com/julia-dizhak/code-examples/blob/master/closure.md)
+ ## Closure [see examples](https://github.com/julia-dizhak/code-examples/blob/master/concepts/closure.md)
+
