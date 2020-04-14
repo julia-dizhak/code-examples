@@ -19,11 +19,11 @@
     The solution below will not cover specifir to browser realisation
     but it covers main concept.
 
-    <pre>
+    ```
     function bound(callBack, context) {
         return function() {
             callBack.apply(context, arguments)
         }
     }
-    </pre>
+    ```
 </details>
