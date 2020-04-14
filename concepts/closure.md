@@ -28,7 +28,7 @@
     In this case closure would be created and i always would be last iteration in array, so i=10. 
     You can use let, that's why each iteration new variable i would be created.
     
-    <pre>
+    ```
         ...
         for (let i = 0; i < 10; i++) {
             funcs.push(function() {
@@ -36,5 +36,5 @@
             })
         }
         ...
-    </pre>
+    ```
 </details>
