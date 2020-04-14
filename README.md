@@ -468,3 +468,31 @@ const obj = {
 
  ## Closure [see examples](https://github.com/julia-dizhak/code-examples/blob/master/concepts/closure.md)
 
+
+
+ ## .bind, .call, .apply [code examples](https://github.com/julia-dizhak/code-examples/blob/master/concepts/bind.md)
+
+ ### Read next code
+
+```
+const obj1= {
+  num: 1
+}
+const obj2 = {
+  num: 2
+}
+
+let addToThis = function(a,b,c) {
+  const sum = this.num + a + b + c;
+  console.log('sum', sum);
+  return sum;
+}
+
+addToThis.call(obj1, 1, 2, 3) // sum is 7
+addToThis.apply(obj2, [1,2,3]) // sum is 8
+
+let bound1 = addToThis.bind(obj1);
+let bound2 = addToThis.bind(obj2);
+bound1(1,2,3) // sum is 7
+bound2(1,2,3) // sum is 8
+```
