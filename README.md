@@ -505,15 +505,14 @@ ES5 syntax
 
 ```
 // constructor
+// just create this as an empty {} and return this behind a sciene
 function Building(floors) {
-  // just create this as an empty {}
   this.what = 'building'
   this.floors = floors;
 
   // this.countFloors =  ...
-  // it's not a good practise because the same function creates for each object
-
-  // return this behind a sciene
+  // it's not a good practise tot create method in costructor
+  // because the same function creates for each object
 }
 
 // prototype is just an object
@@ -524,17 +523,16 @@ Building.prototype.countFloors = function() {
 }
 
 let myHouse = new Building(2);
-myHouse.countFloors(); // ->
+myHouse.countFloors(); // -> condition is false
 
 let officeBuildg = new Building(12);
-officeBuildg.countFloors(); // ->
+officeBuildg.countFloors(); // -> I have 12 floors
 
 
 let whateverHouse = {}
-whateverHouse.countFloors() // - ?
+whateverHouse.countFloors() // -> whateverHouse.countFloors is not a function
 // you can not call this method, becuase it doesn' exist
 // you can run only countFloors for instanse created from Building
-
 ```
 
 
