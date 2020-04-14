@@ -14,8 +14,7 @@
  ```
 <details>
     <summary>
-        Let's assume that's .call and apply already exists.
-        Explanation
+        Explanation: Let's assume that's call and apply already exists.
     </summary>
     The solution below will not cover specifir to browser realisation
     but it covers main concept.

@@ -466,11 +466,11 @@ const obj = {
 </details>
 
 
- ## Closure [see examples](https://github.com/julia-dizhak/code-examples/blob/master/concepts/closure.md)
+ ## Closure [(see code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/closure.md)
 
 
 
- ## .bind, .call, .apply [code examples](https://github.com/julia-dizhak/code-examples/blob/master/concepts/bind.md)
+ ## .bind, .call, .apply [(code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/bind.md)
 
  ### Read next code
 
