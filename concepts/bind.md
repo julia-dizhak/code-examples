@@ -1,4 +1,4 @@
- [<< return back](https://github.com/julia-dizhak/code-examples/edit/master/README.md)
+ [<< return back](https://github.com/julia-dizhak/code-examples)
 
 ### Could you write bind realisation?
 
