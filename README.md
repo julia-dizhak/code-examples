@@ -505,13 +505,13 @@ ES5 syntax
 
 ```
 // constructor
-// just create this as an empty {} and return this behind a sciene
+// just create this as an empty {} and return this behind a scene
 function Building(floors) {
   this.what = 'building'
   this.floors = floors;
 
   // this.countFloors =  ...
-  // it's not a good practise tot create method in costructor
+  // it's not a good practice tot create method in constructor
   // because the same function creates for each object
 }
 
@@ -522,21 +522,34 @@ Building.prototype.countFloors = function() {
   }
 }
 
-let myHouse = new Building(2);
+const myHouse = new Building(2);
 myHouse.countFloors(); // -> condition is false
 
-let officeBuildg = new Building(12);
-officeBuildg.countFloors(); // -> I have 12 floors
+const officeBuilding = new Building(12);
+officeBuilding.countFloors(); // -> I have 12 floors
 
-
-let whateverHouse = {}
+const whateverHouse = {}
 whateverHouse.countFloors() // -> whateverHouse.countFloors is not a function
-// you can not call this method, becuase it doesn' exist
-// you can run only countFloors for instanse created from Building
+// you can not call this method, because it doesn't exist
+// you can run only countFloors for instance created from Building
 ```
 
 
-ES6 syntax
+ECMAScript 2015 (ES6) syntax
 ```
-  ...
+  class Building {
+    constructor(floors) {
+      this.what = 'building';
+      this.floors = floors
+    }
+
+    countFloors() {
+      if (this.floors >= 2) {
+        console.log('I have', this.floors, 'floors')
+      }
+    }
+}
+
+const myFlat = new Building(2);
+myFlat.countFloors(); // I have 2 floors
 ```
