@@ -1,6 +1,6 @@
  [<< return back](https://github.com/julia-dizhak/code-examples)
 
-### How array transfer after .map() method
+### How did thw array transfer after .map() method?
 ```
     [2,2,2,2].map(parseInt)
 ```
