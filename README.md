@@ -435,35 +435,27 @@ const obj = {
 </details>
 
 
-### parseInt and .map
+###################################################################
+## Array methods [(code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/array-methods.md)
+
+### Array.prototype.map()
+
 ```
- [2,2,2,2].map(parseInt)
+  const arr = [1, 4, 9, 16];
+  const map1 = arr.map(x => x * 2);
+  console.log(map1);  // expected output: Array [2, 8, 18, 32]
 ```
 
-<details>
-  <summary>Correct answer</summary>
-  It is common to use the callback with one argument.
-  The parseInt() function parses a string argument and takes 2 arguments and returns an integer of the specified radix (the base in mathematical numeral systems).
-  ```parseInt(x, base)```
+### Array.prototype.forEach()
+```
+const arr = ['a', 'b', 'c'];
 
-  The map() method creates a new array populated with the results of calling a provided function on every element in calling array. Array.prototype.map passes 3 arguments: element and index, the array.
+arr.forEach(element => console.log(element));
 
-   <pre>
-    [2,2,2,2].map(parseInt) ->
-
-    [2,2,2,2].map((item, index) => {
-        parseInt(item, index)
-      })
-    }
-
-    parseInt(2, 0) - 10th numeral system => equal 2
-    parseInt(2, 1) - 1th numeral system => equal NaN
-    parseInt(2, 2) - 2th numeral system => equal NaN
-    parseInt(2, 3) - 3th numeral system => equal 2
-
-    Answer is [2, NaN, NaN, 2]
-   </pre>
-</details>
+// expected output: "a"
+// expected output: "b"
+// expected output: "c"
+```
 
 
  ## Closure [(see code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/closure.md)
