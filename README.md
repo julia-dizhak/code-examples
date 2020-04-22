@@ -64,7 +64,7 @@ console.log(answer.opposite())
 ###################################################################
 ## References types [(code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/references-types.md)
 ```
-
+  References types are Objects and Functions
   Object.create()
   Object.assign()
 ```

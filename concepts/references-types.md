@@ -124,5 +124,5 @@ const obj = {
 
 <details>
   <summary>Explanation</summary>
-  Yes, The Object.assign() method copies all enumerable own properties from one or more source objects to a target object and it returns the target object.
+  Yes, the Object.assign() method copies all enumerable own properties from one or more source objects to a target object and it returns the target object.
 </details>
