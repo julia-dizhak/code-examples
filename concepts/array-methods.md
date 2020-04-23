@@ -1,8 +1,8 @@
  [<< return back](https://github.com/julia-dizhak/code-examples)
 
-### How did thw array transfer after .map() method?
+### How did array transfer after .map() method?
 ```
-    [2,2,2,2].map(parseInt)
+  const arr = [2,2,2,2].map(parseInt)
 ```
 
 <details>
@@ -32,9 +32,9 @@
 
 ### Why arr2 is equal to undefined?
 ```
-    const arr1 = [1, 3, 5, 7, 9];
-    const arr2 = arr1.forEach(number => ++number);
-    console.log(arr2); // = undefined
+  const arr1 = [1, 3, 5, 7, 9];
+  const arr2 = arr1.forEach(number => ++number);
+  console.log(arr2); // = undefined
 ```
 
 <details>

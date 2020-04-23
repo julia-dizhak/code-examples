@@ -301,33 +301,22 @@ console.log(answer.opposite())
 
 
 ###################################################################
-## Loop
+## Loop [(code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/loop.md)
 
-### You need to update for loop and get brr as equal to [1,2,3]
+### for loop
 ```
- let arr = [1, 2, 42, 3];
- let brr = [];
-
- for (let i = 0; i < arr.length; i++) {
-  if (arr[i] === 42) {}
-  brr.push(arr[i]);
-}
+...
 ```
 
-<details>
-  <summary>Correct answer</summary>
-  Can check operator `continue` or left one cycle iteration.
+### do while
+```
+...
+```
 
-   <pre>
-    for (let i = 0; i < arr.length; i++) {
-     // if (arr[i] === 42) continue;
-     if (arr[i] === 42) i++;
-
-     brr.push(arr[i]);
-    }
-   </pre>
-</details>
-
+### while
+```
+...
+```
 
 ###################################################################
 ## Array methods [(code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/array-methods.md)
