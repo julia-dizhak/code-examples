@@ -28,9 +28,9 @@
 ```
     const arr = [1, 2, 3, 4, 5]
     var i = 0;
-    var result = 0;
+    var sum = 0;
     while (i++ < arr.length - 1) {
-        result += arr[i]
+        sum += arr[i]
     }
 ```
 
