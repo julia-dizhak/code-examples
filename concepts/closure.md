@@ -28,13 +28,51 @@
     In this case closure would be created and i always would be last iteration in array, so i=10.
     You can use let, that's why each iteration new variable i would be created.
 
-    ```
+    <pre>
         ...
         for (let i = 0; i < 10; i++) {
             funcs.push(function() {
-                console.log(i)
+                console.log('i', i)
             })
         }
         ...
-    ```
+    </pre>
+</details>
+
+### What you will see in console after running code example below? Could you change a code and display 0 1 2 ... 10 in console?
+```
+    for (var i = 0; i < 10; i++) {
+        setTimeout(function() {
+            console.log('i', i)
+        }, i*1000)
+    }
+ ```
+<details>
+    <summary>Explanation</summary>
+
+    After running fist sample in console will be displayed `i 10` and then every next 1 sec will be appear `i 10`.
+    Because setTimeout is async function and it goes to stack event and run after timeout which is 1 sec. setTimeout will invoke after loop already finish and i will be equal to 10.
+
+    To be able to display i from 0 1 2 ... 9 in console, you can use let instead of var.
+
+    You can use IIFE
+    <pre>
+        for (var i = 0; i < 10; i++) {
+            (function(i) {
+                setTimeout(function() {
+                    console.log('i', i)
+                }, i*1000)
+            })(i)
+        }
+    </pre>
+    or second variant
+    <pre>
+        for (var i = 0; i < 10; i++) {
+            setTimeout((function(i) {
+                return function() {
+                    console.log('i', i)
+            }
+            })(i), i*1000)
+        }
+    </pre>
 </details>

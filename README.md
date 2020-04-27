@@ -309,7 +309,7 @@ arr.forEach(element => console.log(element));
 
 
  ## Closure [(see code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/closure.md)
-
+A closure is an inner function that has access to the outer (enclosing) function’s variables - scope chain.
 
 
  ## .bind, .call, .apply [(code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/bind.md)
