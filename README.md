@@ -3,6 +3,11 @@ I use this repo to track examples of tricky JS code, which will help me to imrov
 See examples of code and answers or explanation below.
 Code examples divided by topics.
 
+## Table of Contents
+
+- [Operator typeof](#operator-typeof)
+- [Primitive typest](#primitive-types)
+
 ## Operator typeof
 
 ### What will return next line of code?
@@ -19,7 +24,6 @@ Code examples divided by topics.
 </details>
 
 
-########################################################
 ## Primitive types [(code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/primitive-types.md)
 ```
 Primitives types are undefined, Boolean, Number, String, Symbol, BigInt and

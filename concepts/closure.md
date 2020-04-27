@@ -39,7 +39,7 @@
     </pre>
 </details>
 
-### What you will see in console after running code example below? Could you change a code and display 0 1 2 ... 10 in console?
+### What you will see in console? Could you change code and display i equals to 0 1 2 ... 10 every sec in console ?
 ```
 for (var i = 0; i < 10; i++) {
     setTimeout(function() {
@@ -53,9 +53,9 @@ for (var i = 0; i < 10; i++) {
     Because setTimeout is async function and it goes to stack event and run after timeout which is 1 sec.
     setTimeout will invoke after loop already finish and i will be equal to 10.
 
-    To be able to display i from 0 1 2 ... 9 in console, you can use let instead of var.
+    To be able to display i from 0 1 2 ... 9 in console, you can use let in for loop.
 
-    Or you can use IIFE:
+    You can use IIFE (will be closure inside) as well:
 <pre>
 for (var i = 0; i < 10; i++) {
     (function(i) {
