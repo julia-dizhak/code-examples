@@ -8,6 +8,16 @@ Code examples divided by topics.
 - [Operator typeof](#operator-typeof)
 - [Primitive types](#primitive-types)
 - [References types](#references-types)
+- [Variables](#variables)
+- [Operators](#operators)
+- [Function declaration vs function expression](#function-declaration-vs-function-expression)
+- [Arrow functions](#arrow-functions)
+- [By references vs by value](#by-references-vs-by-value)
+- [Loops](#loops)
+- [Array methods](#array-methods)
+- [Closure](#closure)
+- [.bind, .call, .apply](#bind-call-apply)
+- [Class](#class)
 
 ## Operator typeof
 
@@ -43,10 +53,11 @@ References types tare
 - Objects
 - and Functions
 
-Object.create()
-Object.assign()
+Examples related to
+- Object.create()
+- Object.assign()
 
-[(code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/references-types.md)
+[(see code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/references-types.md)
 
 
 ## Variables
@@ -84,7 +95,7 @@ Object.assign()
  So the answer is 10.
 </details>
 
-### Assignament
+### Assignment
 ```
  null = 10
  console.log(null)
@@ -94,7 +105,7 @@ Object.assign()
   <summary>Explanation</summary>
 
   This code produce an error `Uncaught SyntaxError: Invalid left-hand side in assignment`.
-  It is error because the left side of assignament must always be 'wire'.
+  It is error because the left side of assignment must always be 'wire'.
   Variables are wires, so they can appear on the left side.
 
   A literal like `null` is not a 'wire',
@@ -123,12 +134,9 @@ Object.assign()
 </details>
 
 
+## Operators
 
-
-###################################################################
-## Operator '+' (concatenation)
-
-### What will be in console?
+### Operator '+' (concatenation). What will be in console?
 ```
 [] + {}
 [] + []
@@ -152,7 +160,6 @@ Object.assign()
 </details>
 
 
-###################################################################
 ## Function declaration vs function expression
 
 ### What happens? What you will see in console?
@@ -186,7 +193,6 @@ Object.assign()
 </details>
 
 
-###################################################################
 ## Arrow functions
 
 ### What happens after running obj.test3(), obj.test4() ?
@@ -234,7 +240,6 @@ Object.assign()
 </details>
 
 
-###################################################################
 ## By references vs by value
 
 ### What will be value a?
@@ -277,29 +282,18 @@ Object.assign()
 
 </details>
 
+## Loops
 
-###################################################################
-## Loop [(code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/loop.md)
+- for loop
+- do while
+- while
 
-### for loop
-```
-...
-```
+[(see code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/loop.md)
 
-### do while
-```
-...
-```
 
-### while
-```
-...
-```
+## Array methods
 
-###################################################################
-## Array methods [(code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/array-methods.md)
-
-### Array.prototype.map()
+- Array.prototype.map()
 
 ```
   const arr = [1, 4, 9, 16];
@@ -307,26 +301,19 @@ Object.assign()
   console.log(map1);  // expected output: Array [2, 8, 18, 32]
 ```
 
-### Array.prototype.forEach()
-```
-const arr = ['a', 'b', 'c'];
+- Array.prototype.forEach()
 
-arr.forEach(element => console.log(element));
-
-// expected output: "a"
-// expected output: "b"
-// expected output: "c"
-```
+[(see code examples >>)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/array-methods.md)
 
 
- ## Closure
+## Closure
 
 A closure is an inner function that has access to the outer (enclosing) function’s variables - scope chain.
 - setTimeout and closure
 
-[(see code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/closure.md)
+[(see code examples >>)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/closure.md)
 
- ## .bind, .call, .apply [(code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/bind.md)
+ ## .bind, .call, .apply
 
  ### Read next code
 
@@ -353,7 +340,10 @@ bound1(1,2,3) // -> sum is 7
 bound2(1,2,3) // -> sum is 8
 ```
 
-## Class [(code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/class.md)
+[(see code examples >>)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/bind.md)
+
+
+## Class
 
 ### Defining a Class
 
@@ -409,3 +399,5 @@ ECMAScript 2015 (ES6) syntax
 const myFlat = new Building(2);
 myFlat.countFloors(); // I have 2 floors
 ```
+
+[(see code examples >>)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/class.md)
