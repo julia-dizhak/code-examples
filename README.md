@@ -35,7 +35,7 @@ Code examples divided by topics.
 </details>
 
 
-## Primitive types [(code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/primitive-types.md)
+## Primitive types
 
 Primitives types are
 - undefined,
@@ -46,6 +46,7 @@ Primitives types are
 - BigInt and
 - special primitive type null
 
+[see code examples >>](https://github.com/julia-dizhak/code-examples/blob/master/concepts/primitive-types.md)
 
 ## References types
 
@@ -57,7 +58,7 @@ Examples related to
 - Object.create()
 - Object.assign()
 
-[(see code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/references-types.md)
+[see code examples >>](https://github.com/julia-dizhak/code-examples/blob/master/concepts/references-types.md)
 
 
 ## Variables
@@ -288,7 +289,7 @@ Examples related to
 - do while
 - while
 
-[(see code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/loop.md)
+[see code examples >>](https://github.com/julia-dizhak/code-examples/blob/master/concepts/loop.md)
 
 
 ## Array methods
@@ -303,7 +304,7 @@ Examples related to
 
 - Array.prototype.forEach()
 
-[(see code examples >>)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/array-methods.md)
+[see code examples >>](https://github.com/julia-dizhak/code-examples/blob/master/concepts/array-methods.md)
 
 
 ## Closure
@@ -311,7 +312,7 @@ Examples related to
 A closure is an inner function that has access to the outer (enclosing) function’s variables - scope chain.
 - setTimeout and closure
 
-[(see code examples >>)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/closure.md)
+[see code examples >>](https://github.com/julia-dizhak/code-examples/blob/master/concepts/closure.md)
 
  ## .bind, .call, .apply
 
@@ -340,7 +341,7 @@ bound1(1,2,3) // -> sum is 7
 bound2(1,2,3) // -> sum is 8
 ```
 
-[(see code examples >>)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/bind.md)
+[see code examples >>](https://github.com/julia-dizhak/code-examples/blob/master/concepts/bind.md)
 
 
 ## Class
@@ -400,4 +401,4 @@ const myFlat = new Building(2);
 myFlat.countFloors(); // I have 2 floors
 ```
 
-[(see code examples >>)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/class.md)
+[see code examples >>](https://github.com/julia-dizhak/code-examples/blob/master/concepts/class.md)
