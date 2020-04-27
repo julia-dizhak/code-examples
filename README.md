@@ -6,7 +6,8 @@ Code examples divided by topics.
 ## Table of Contents
 
 - [Operator typeof](#operator-typeof)
-- [Primitive typest](#primitive-types)
+- [Primitive types](#primitive-types)
+- [References types](#references-types)
 
 ## Operator typeof
 
@@ -25,23 +26,29 @@ Code examples divided by topics.
 
 
 ## Primitive types [(code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/primitive-types.md)
-```
-Primitives types are undefined, Boolean, Number, String, Symbol, BigInt and
-special primitive type null
 
-```
-
-
-###################################################################
-## References types [(code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/references-types.md)
-```
-  References types are Objects and Functions
-  Object.create()
-  Object.assign()
-```
+Primitives types are
+- undefined,
+- Boolean,
+- Number,
+- String,
+- Symbol,
+- BigInt and
+- special primitive type null
 
 
-###################################################################
+## References types
+
+References types tare
+- Objects
+- and Functions
+
+Object.create()
+Object.assign()
+
+[(code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/references-types.md)
+
+
 ## Variables
 
 ### Does immutability of strings play a role here, and what role does it play? What will be in console?
@@ -312,9 +319,12 @@ arr.forEach(element => console.log(element));
 ```
 
 
- ## Closure [(see code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/closure.md)
-A closure is an inner function that has access to the outer (enclosing) function’s variables - scope chain.
+ ## Closure
 
+A closure is an inner function that has access to the outer (enclosing) function’s variables - scope chain.
+- setTimeout and closure
+
+[(see code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/closure.md)
 
  ## .bind, .call, .apply [(code examples)](https://github.com/julia-dizhak/code-examples/blob/master/concepts/bind.md)
 

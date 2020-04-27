@@ -39,6 +39,7 @@
     </pre>
 </details>
 
+
 ### What you will see in console? Could you change code and display i equals to 0 1 2 ... 10 every sec in console ?
 ```
 for (var i = 0; i < 10; i++) {
@@ -84,4 +85,18 @@ for (var i = 0; i < 10; i++) {
   }).bind(null, i) , i*1000)
 }
 </pre>
+</details>
+
+
+### What will be in console?
+```
+for (var i = 0; i < 10; i++) {
+  setTimeout(function() {
+    console.log('i', i)
+  }, 1000)
+}
+```
+<details>
+    <summary>Explanation</summary>
+    In console will appear be i 10 after 1 sec
 </details>
