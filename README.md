@@ -10,7 +10,7 @@ Code examples divided by topics.
 - [References types](#references-types)
 - [Variables](#variables)
 - [Operators](#operators)
-- [Function declaration vs function expression](#function-declaration-vs-function-expression)
+- [Functions](#functions)
 - [Arrow functions](#arrow-functions)
 - [By references vs by value](#by-references-vs-by-value)
 - [Loops](#loops)
@@ -161,84 +161,13 @@ Examples related to
 </details>
 
 
-## Function declaration vs function expression
+## Functions
 
-### What happens? What you will see in console?
-```
- test1();
- test2();
+- Functions parameters and scope, localness of variables
+- Function declaration vs function expression
+- Arrow functions
 
- function test1() {
-   console.log('test1');
- }
-
- var test2 = function() {
-   console.log('test2');
- }
-```
-<details>
-  <summary>Correct answer</summary>
-
-   first case, test1() - function declaration. JS interpreter moves function declaration to the top of their containing scope
- (hoisting). That's why you can use function declaration before you declare it.
-  <pre>
-    in console -> test1
-  </pre>
-
-   in the second case, test2 declared as function expression. The variable name will be hoisted, but you can't access until JS
-   execution encounters its definition. You can't use before define them -> function doesn't exist
-   <pre>
-     var - test2 is not a function
-     const/let - cannot access 'test2' before initialization
-   </pre>
-</details>
-
-
-## Arrow functions
-
-### What happens after running obj.test3(), obj.test4() ?
-```
-  const  obj = {};
-
-  const test3 = () => {
-    console.log(this);
-  }
-
-  function test4() {
-    console.log(this);
-  }
-
-  obj.test3 = test3;
-  obj.test4 = test4;
-
-  obj.test3() // ?
-  obj.test4() //  ?
-```
-<details>
-  <summary>Correct answer</summary>
-
-   Unlike regular functions, arrows functions do not have their own `this` (does not bind its own this).
-   The value of `this` inside arrow functions is not dependent on how they are invoked.
-   It depends only on its `enclosing context` (literal scope).
-  <pre>
-    in console // -> Window {parent: Window, ...}
-  </pre>
-  But if test3 will be define as obj method, then `this` will be `obj` itself.
-  <pre>
-   const obj = {
-     test3: () => {
-      console.log(this);
-     }
-   }
-   // -> obj {test3: ƒ}
-  </pre>
-
-   In the second case, `test4()` is function declaration. Regular function defines its own this or context depending on their invocation, in our case, `this = object itself`.
-
-   <pre>
-     -> // {test3: ƒ, test4: ƒ}
-   </pre>
-</details>
+[see code examples >>](https://github.com/julia-dizhak/code-examples/blob/master/concepts/functions.md)
 
 
 ## By references vs by value

@@ -16,10 +16,7 @@
     }
  ```
 <details>
-    <summary>
-        What will be value for i?
-        Could you edit a code and have i as 0, 1, 2?
-    </summary>
+    <summary>What will be value for i? Could you edit a code and have i as 0, 1, 2?</summary>
     The array funcs has a push callback function.
     funcs[j]() will call this function to print the i in the console.
     function() { console.log(i) } is an expression which evaluates to a value that is function that logs i.
@@ -28,15 +25,14 @@
     In this case closure would be created and i always would be last iteration in array, so i=10.
     You can use let, that's why each iteration new variable i would be created.
 
-    <pre>
-        ...
-        for (let i = 0; i < 10; i++) {
-            funcs.push(function() {
-                console.log('i', i)
-            })
-        }
-        ...
-    </pre>
+<pre>
+    ...
+    for (let i = 0; i < 10; i++) {
+        funcs.push(function() {
+            console.log('i', i)
+        })
+    }
+</pre>
 </details>
 
 
@@ -98,5 +94,5 @@ for (var i = 0; i < 10; i++) {
 ```
 <details>
     <summary>Explanation</summary>
-    In console will appear be i 10 after 1 sec
+    In console will be displayed `i 10` after 1 sec
 </details>
