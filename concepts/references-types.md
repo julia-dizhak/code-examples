@@ -126,3 +126,27 @@ const obj = {
   <summary>Explanation</summary>
   Yes, the Object.assign() method copies all enumerable own properties from one or more source objects to a target object and it returns the target object.
 </details>
+
+
+### What will be the output of the following code?
+```
+  var Employee = {
+    company: 'xyz'
+  }
+  var emp1 = Object.create(Employee);
+  delete emp1.company
+  console.log(emp1.company);
+```
+
+<details>
+  <summary>Explanation</summary>
+  Above code will output xyz as output.
+  Here emp1 object got company as prototype property.
+  delete operator doesn’t delete prototype property.
+
+  emp1 object doesn’t have company as its own property.
+  You can test it like:
+  <pre>
+    console.log(emp1.hasOwnProperty('company')); // output : false
+  </pre>
+</details>

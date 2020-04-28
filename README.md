@@ -11,7 +11,7 @@ Code examples divided by topics.
 - [Operators](#operators)
 - [Functions](#functions)
 - [Arrow functions](#arrow-functions)
-- [By references vs by value](#by-references-vs-by-value)
+- [Pass-by-references vs pass-by-value)(#pass-by-references-vs-pass-by-value)
 - [Loops](#loops)
 - [Array methods](#array-methods)
 - [Closure](#closure)
@@ -136,47 +136,11 @@ Examples related to
 [see code examples >>](https://github.com/julia-dizhak/code-examples/blob/master/concepts/functions.md)
 
 
-## By references vs by value
+## Pass-by-references vs pass-by-value
+- Pass--by-references
+- Pass-by-value
 
-### What will be value a?
-```
- let a = {};
-
- (function b(a) {
-   a.a = 10;
-   a = null;
- })(a);
- console.log('a', a);
-```
-
-<details>
-  <summary>Correct answer</summary>
-  Function argument is local variable.
-  When we overwrite a local variable for IIFE or function expression, it doesn't reflect on an outer scope.
-
-   <pre>
-    let a = {};
-
-    (function b(a) {
-      a.a = 10; // -> {a: 10} because a is object - reference type
-      a = null; // overwrite a local variable
-      console.log('a', a); // local a is null, but not the outside
-    })(a);
-    console.log('a', a); -> {a: 10}
-   </pre>
-
-   Example with function expression
-   <pre>
-     var a = 5;
-     function b(a) {
-      a = 9;
-      console.log('a local', a) -> 9
-    }
-    b(a);
-    console.log('a outer', a) -> 5
-   </pre>
-
-</details>
+[see code examples >>](https://github.com/julia-dizhak/code-examples/blob/master/concepts/pass-by-references-by-value.md)
 
 ## Loops
 
