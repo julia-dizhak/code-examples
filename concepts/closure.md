@@ -1,5 +1,30 @@
  [<< return back](https://github.com/julia-dizhak/code-examples)
 
+### Creating closure
+```
+    function wrapValue(n) {
+    var localVariable = n;
+
+        return function() {
+            return localVariable;
+        }
+    }
+    var wrap1 = wrapValue(1);
+    console.log('wrap1', wrap1()); // ?
+
+    var wrap2 = wrapValue(2);
+    console.log('wrap2', wrap2()); // ?
+ ```
+<details>
+    <summary>What will return wrap1(), wrap2()?</summary>
+    Because local variables are really re-created for every function call, in console
+    <pre>
+        wrap1() -> 1
+        wrap2() -> 2
+    </pre>
+</details>
+
+
 ### Array with callback function
 ```
     var funcs = [];
