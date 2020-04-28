@@ -5,7 +5,6 @@ Code examples divided by topics.
 
 ## Table of Contents
 
-- [Operator typeof](#operator-typeof)
 - [Primitive types](#primitive-types)
 - [References types](#references-types)
 - [Variables](#variables)
@@ -18,22 +17,6 @@ Code examples divided by topics.
 - [Closure](#closure)
 - [.bind, .call, .apply](#bind-call-apply)
 - [Class](#class)
-
-## Operator typeof
-
-### What will return next line of code?
-```
- typeof(typeof(value))
-```
-<details>
-  <summary>Correct Answer</summary>
-
-  `typeof(typeof(value))` is always "string".
-
-  We know `typeof(value)` always gives us one of the predetermined strings: "undefined", "boolean", "number", and so on.
-  So typeof any of them is "string". Because they’re strings!
-</details>
-
 
 ## Primitive types
 
@@ -137,29 +120,12 @@ Examples related to
 
 ## Operators
 
-### Operator '+' (concatenation). What will be in console?
-```
-[] + {}
-[] + []
-```
-<details>
-  <summary>Explanation</summary>
-  You can only add numbers and strings, all other values will be converted to either one of those types.
-  The plus operator performs three kinds of conversion: It converts values to primitives, numbers and strings.
+- operator typeof
+- operator concatenation
+- operator delete
 
-  <pre>
-   > [] + [] -> ''
-    [].toString() -> ''
 
-   > [] + {}
-     '[object Object]'
-     String({}) -> '[object Object]'
-  </pre>
-
-  Objects are converted to either string (if the other operand is a string) or number (otherwise). If you want to concatenate   arrays, you need to use a method Array.prototype.concat(), for example.
-  There is no built-in way in JS to 'concatenate' (merge) objects -lodash
-</details>
-
+[see code examples >>](https://github.com/julia-dizhak/code-examples/blob/master/concepts/operators.md)
 
 ## Functions
 
@@ -239,6 +205,8 @@ Examples related to
 ## Closure
 
 A closure is an inner function that has access to the outer (enclosing) function’s variables - scope chain.
+
+- defining a closure
 - setTimeout and closure
 
 [see code examples >>](https://github.com/julia-dizhak/code-examples/blob/master/concepts/closure.md)
