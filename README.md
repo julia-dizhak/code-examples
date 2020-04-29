@@ -8,10 +8,11 @@ Code examples divided by topics.
 - [Primitive types](#primitive-types)
 - [References types](#references-types)
 - [Variables](#variables)
+- [Comparison operators: with and without coercion](#comparison-operators-with-and-without-coercion)
 - [Operators](#operators)
 - [Functions](#functions)
 - [Arrow functions](#arrow-functions)
-- [Pass-by-references vs pass-by-value)(#pass-by-references-vs-pass-by-value)
+- [Pass-by-references vs pass-by-value](#pass-by-references-vs-pass-by-value)
 - [Loops](#loops)
 - [Array methods](#array-methods)
 - [Closure](#closure)
@@ -118,6 +119,15 @@ Examples related to
 </details>
 
 
+## Comparison operators: with and without coercion
+```
+== with coercion
+=== without coercion
+```
+
+[see code examples >>](https://github.com/julia-dizhak/code-examples/blob/master/concepts/coercion.md)
+
+
 ## Operators
 
 - operator typeof
@@ -137,7 +147,7 @@ Examples related to
 
 
 ## Pass-by-references vs pass-by-value
-- Pass--by-references
+- Pass-by-references
 - Pass-by-value
 
 [see code examples >>](https://github.com/julia-dizhak/code-examples/blob/master/concepts/pass-by-references-by-value.md)

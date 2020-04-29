@@ -1,6 +1,6 @@
  [<< return back](https://github.com/julia-dizhak/code-examples)
 
-### What will be value a?
+### What will be the output of a?
 ```
  let a = {};
 
@@ -40,7 +40,7 @@
 
 </details>
 
-###  What will be the output of the following code?
+### What will be the output of the following code?
 ```
 let some = {a: 7};
 
@@ -55,5 +55,4 @@ console.log(some.a);
 <details>
   <summary>Correct answer</summary>
   Because for objects the value of the variable is a reference, answer will be 10
-
 </details>
