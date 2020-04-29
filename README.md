@@ -120,10 +120,19 @@ Examples related to
 
 
 ## Comparison operators: with and without coercion
+
+== checks for equality with coercion and === checks for equality without coercion  -  strict equality.
+
+When an operator is applied to the “wrong” type of value, JavaScript will quietly convert that value to the type it needs, using a set of rules that often aren’t what you want or expect. This is called type coercion.
+
 ```
 == with coercion
 === without coercion
 ```
+
+If the value is 0, -0, null, false, NaN, undefined, or the empty string (""), the object has an initial value of false. All other values, including any object, an empty array ([]), or the string "false", create an object with an initial value of true.
+
+  Do not confuse the primitive Boolean values true and false with the true and false values of the Boolean object.
 
 [see code examples >>](https://github.com/julia-dizhak/code-examples/blob/master/concepts/coercion.md)
 

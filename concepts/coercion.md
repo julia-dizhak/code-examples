@@ -1,6 +1,24 @@
  [<< return back](https://github.com/julia-dizhak/code-examples)
 
-### With and without coercion
+### What will be the output of the comparison?
+```
+var a = "42";
+var b = 42;
+
+a == b -> ?
+a === b -> ?
+```
+
+<details>
+  <summary>Correct answer</summary>
+  <pre>
+    a == b -> true
+    a === b -> false
+  </pre>
+</details>
+
+
+### Comparison with and without coercion
 ```
 0 == false -> ?
 0 === false -> ?
@@ -8,11 +26,10 @@
 
 <details>
   <summary>Explanation</summary>
-  If the value is 0, -0, null, false, NaN, undefined, or the empty string (""), the object has an initial value of false. All other values, including any object, an empty array ([]), or the string "false", create an object with an initial value of true.
-
-  Do not confuse the primitive Boolean values true and false with the true and false values of the Boolean object.
+  false is compared with Number type, false is equal to 0, than 0 == 0 is equal to true.
+  In second case, comparison without coercion, 0 and false have different types.
   <pre>
-    0 == false -> false coercion to Boolean is equal to true
+    0 == false -> true
     0 === false -> false
   </pre>
 </details>
@@ -43,7 +60,7 @@ member === cat -> ?
 </details>
 
 
-### What will be the output of the following code?
+### What will be the output of the result?
 ```
 let cars1 = ["Mercedes", "Volkswagen", "Ford"];
 let cars2 = ["Mercedes", "Volkswagen", "Ford"];

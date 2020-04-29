@@ -3,8 +3,7 @@
 ### Creating closure
 ```
     function wrapValue(n) {
-    var localVariable = n;
-
+        var localVariable = n;
         return function() {
             return localVariable;
         }
@@ -17,7 +16,7 @@
  ```
 <details>
     <summary>What will return wrap1(), wrap2()?</summary>
-    Because local variables are really re-created for every function call, in console
+    Because in JS exist closure and local variables are re-created for every function call
     <pre>
         wrap1() -> 1
         wrap2() -> 2
