@@ -26,7 +26,7 @@ It prepends "Copy of" to the new spreadsheet's title.
 <details>
   <summary>What did the function accidentally change as well ?</summary>
   This function also accidentally changes the title of original spreadsheet.
-  <code>
+  <pre>
    const original = {
     created: '',
     author: 'Test',
@@ -44,7 +44,7 @@ It prepends "Copy of" to the new spreadsheet's title.
     cells: ""
     metadata: {title: "Copy of one test title"}
   }
- </code>
+ </pre>
 </details>
 
 ### Mutability
@@ -69,14 +69,14 @@ It prepends "Copy of" to the new spreadsheet's title.
   <summary>What will be the output of the following code?</summary>
   The object1 and object2 bindings grasp the same object, which is why changing object1 also changes the value of object2. They are said to have the same identity. The binding object3 points to a different object, which initially contains the same properties as object1 but lives a separate life.
 
-  <code>
+  <pre>
     console.log(object1 == object2); // → true
     console.log(object1 == object3); // → false
 
     object1.value = 15;
     console.log(object2.value); // → 15
     console.log(object3.value); // → 10
-  </code>
+  </pre>
 </details>
 
 ### What will return obj.c?
