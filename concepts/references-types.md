@@ -24,8 +24,8 @@ It throws an error if the original spreadsheet isn't saved.
 It prepends "Copy of" to the new spreadsheet's title.
 
 <details>
-  <summary>What did the function accidentaly change as well ?</summary>
-  This function also accidentely changes the title of original spreadsheet.
+  <summary>What did the function accidentally change as well ?</summary>
+  This function also accidentally changes the title of original spreadsheet.
   <code>
    const original = {
     created: '',
@@ -45,6 +45,38 @@ It prepends "Copy of" to the new spreadsheet's title.
     metadata: {title: "Copy of one test title"}
   }
  </code>
+</details>
+
+### Mutability
+```
+  let object1 = {value: 10};
+  let object2 = object1;
+  let object3 = {value: 10};
+
+  console.log(object1 == object2);
+  // → true
+  console.log(object1 == object3);
+  // → false
+
+  object1.value = 15;
+  console.log(object2.value);
+  // → 15
+  console.log(object3.value);
+  // → 10
+```
+
+<details>
+  <summary>What will be the output of the following code?</summary>
+  The object1 and object2 bindings grasp the same object, which is why changing object1 also changes the value of object2. They are said to have the same identity. The binding object3 points to a different object, which initially contains the same properties as object1 but lives a separate life.
+
+  <code>
+    console.log(object1 == object2); // → true
+    console.log(object1 == object3); // → false
+
+    object1.value = 15;
+    console.log(object2.value); // → 15
+    console.log(object3.value); // → 10
+  </code>
 </details>
 
 ### What will return obj.c?
@@ -83,7 +115,7 @@ const obj = {
 
 </details>
 
-### Object.create: read next code
+### Object.create
 ```
   const a = { val: 5 }
   const b = Object.create(a);
@@ -98,7 +130,7 @@ const obj = {
 ```
 
 <details>
-  <summary>What console will display a.val, b.val?</summary>
+  <summary>What will be the output for a.val, b.val?</summary>
    The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
 
    First log will be display `b.val -> 5` because of inheritance
@@ -112,8 +144,31 @@ const obj = {
   </pre>
 </details>
 
+### Object.create and operator delete
+```
+  var Employee = {
+    company: 'xyz'
+  }
+  var emp1 = Object.create(Employee);
+  delete emp1.company
+  console.log(emp1.company); // ?
+```
 
-### If it is correct that obj1.prop1 and obj2.prop1 will have the same reference?
+<details>
+  <summary>What will be the output of the emp1.company?</summary>
+  Above code will output `xyz`.
+  Here emp1 object got company as prototype property.
+  Operator delete doesn’t delete prototype property.
+
+  emp1 object doesn’t have company as its own property.
+  You can test it like:
+  <pre>
+    console.log(emp1.hasOwnProperty('company')); // output : false
+  </pre>
+</details>
+
+
+### Object.assign
 ```
   const obj0 = { };
   const obj1 = {
@@ -123,30 +178,7 @@ const obj = {
 ```
 
 <details>
-  <summary>Explanation</summary>
+  <summary>If it is correct that obj1.prop1 and obj2.prop1 have the same reference?<summary>
   Yes, the Object.assign() method copies all enumerable own properties from one or more source objects to a target object and it returns the target object.
 </details>
 
-
-### What will be the output of the following code?
-```
-  var Employee = {
-    company: 'xyz'
-  }
-  var emp1 = Object.create(Employee);
-  delete emp1.company
-  console.log(emp1.company);
-```
-
-<details>
-  <summary>Explanation</summary>
-  Above code will output xyz as output.
-  Here emp1 object got company as prototype property.
-  delete operator doesn’t delete prototype property.
-
-  emp1 object doesn’t have company as its own property.
-  You can test it like:
-  <pre>
-    console.log(emp1.hasOwnProperty('company')); // output : false
-  </pre>
-</details>

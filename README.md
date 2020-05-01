@@ -34,7 +34,7 @@ Primitives types are
 
 ## References types
 
-References types tare
+References types are
 - Objects
 - and Functions
 
