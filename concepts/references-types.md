@@ -27,23 +27,23 @@ It prepends "Copy of" to the new spreadsheet's title.
   <summary>What did the function accidentally change as well ?</summary>
   This function also accidentally changes the title of original spreadsheet.
   <pre>
-   const original = {
-    created: '',
-    author: 'Test',
-    cells: '',
-    metadata: {
-      title: 'one test title'
+    const original = {
+      created: '',
+      author: 'Test',
+      cells: '',
+      metadata: {
+        title: 'one test title'
+      }
     }
-  }
 
-  duplicateSpreadsheet(original)
+    duplicateSpreadsheet(original)
 
-  {
-    created: 1585570108872
-    author: "Test"
-    cells: ""
-    metadata: {title: "Copy of one test title"}
-  }
+    {
+      created: 1585570108872
+      author: "Test"
+      cells: ""
+      metadata: {title: "Copy of one test title"}
+    }
  </pre>
 </details>
 
@@ -53,16 +53,12 @@ It prepends "Copy of" to the new spreadsheet's title.
   let object2 = object1;
   let object3 = {value: 10};
 
-  console.log(object1 == object2);
-  // → true
-  console.log(object1 == object3);
-  // → false
+  console.log(object1 == object2); // ?
+  console.log(object1 == object3); // ?
 
   object1.value = 15;
-  console.log(object2.value);
-  // → 15
-  console.log(object3.value);
-  // → 10
+  console.log(object2.value); // ?
+  console.log(object3.value); // ?
 ```
 
 <details>
@@ -70,6 +66,7 @@ It prepends "Copy of" to the new spreadsheet's title.
   The object1 and object2 bindings grasp the same object, which is why changing object1 also changes the value of object2. They are said to have the same identity. The binding object3 points to a different object, which initially contains the same properties as object1 but lives a separate life.
 
   <pre>
+    ...
     console.log(object1 == object2); // → true
     console.log(object1 == object3); // → false
 

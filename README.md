@@ -10,6 +10,7 @@ Code examples divided by topics.
 - [Variables](#variables)
 - [Comparison operators: with and without coercion](#comparison-operators-with-and-without-coercion)
 - [Operators](#operators)
+- [Control flow](#control-flow)
 - [Functions](#functions)
 - [Arrow functions](#arrow-functions)
 - [Pass-by-references vs pass-by-value](#pass-by-references-vs-pass-by-value)
@@ -143,8 +144,18 @@ If the value is 0, -0, null, false, NaN, undefined, or the empty string (""), th
 - operator concatenation
 - operator delete
 
-
 [see code examples >>](https://github.com/julia-dizhak/code-examples/blob/master/concepts/operators.md)
+
+
+## Control flow
+
+- continue
+- switch
+- break
+
+
+[see code examples >>](https://github.com/julia-dizhak/code-examples/blob/master/concepts/control-flow.md)
+
 
 ## Functions
 
