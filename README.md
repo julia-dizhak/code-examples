@@ -40,8 +40,9 @@ References types are
 - and Functions
 
 Examples related to
-- Object.create()
-- Object.assign()
+- Object.create
+- Object.assign
+- spread syntax
 
 [see code examples >>](https://github.com/julia-dizhak/code-examples/blob/master/concepts/references-types.md)
 

@@ -24,6 +24,23 @@
 </details>
 
 
+### What will be the output of the following code?
+```
+    function myFunction(a) {
+        var b = 6;
+        return function(b) {
+            console.log(b, a)
+        }
+    }
+    var testFunction = myFunction(2)
+    testFunction(3)
+ ```
+<details>
+    <summary>Explanation</summary>
+    in console you will see (3,2) because of closure
+</details>
+
+
 ### Array with callback function
 ```
     var funcs = [];

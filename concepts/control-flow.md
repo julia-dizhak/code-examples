@@ -47,5 +47,5 @@
 
 <details>
   <summary>Correct answer</summary>
-  secondVar equal to 'barfoo', because there is no operator break
+  secondVar equal to 'barfoo', because there is no break
 </details>
