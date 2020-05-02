@@ -276,21 +276,31 @@ whateverHouse.countFloors() // -> whateverHouse.countFloors is not a function
 
 ECMAScript 2015 (ES6) syntax
 ```
-  class Building {
-    constructor(floors) {
-      this.what = 'building';
-      this.floors = floors
-    }
+class Building {
+  constructor(floors) {
+    this.what = 'building';
+    this.floors = floors
+  }
 
-    countFloors() {
-      if (this.floors >= 2) {
-        console.log('I have', this.floors, 'floors')
-      }
+  countFloors() {
+    if (this.floors >= 2) {
+      console.log('I have', this.floors, 'floors')
     }
+  }
 }
 
 const myFlat = new Building(2);
 myFlat.countFloors(); // I have 2 floors
 ```
+
+### Initializing difference between prototypes and Classes
+
+Using prototypes you can create a method in constructor function.
+But it's not a good practice, because this method creates for each object.
+Better to use prototype.
+
+In classes there is the constructor method, which is a special method for creating and initializing an object created with a class. There can only be one special method with the name "constructor" in a class. A SyntaxError will be thrown if the class contains more than one occurrence of a constructor method.
+
+A constructor can use the super keyword to call the constructor of the super class.
 
 [see code examples >>](https://github.com/julia-dizhak/code-examples/blob/master/concepts/class.md)

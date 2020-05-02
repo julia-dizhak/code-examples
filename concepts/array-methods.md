@@ -41,3 +41,18 @@
   <summary>Correct answer</summary>
   Because method .forEach() returns undefined
 </details>
+
+
+### Give a value for num1, num2 to have result1 and result2 as true?
+```
+  const arr1 = [1,3,5,7];
+  const arr2 = [2,4,6,8];
+
+  const result1 = arr1.every(currentValue=> currentValue % num1 == 1);
+  const result2 = arr2.every(currentValue=> currentValue % num2 == 0);
+```
+
+<details>
+  <summary>Correct answer</summary>
+  Method every return boolean, the answer is num1 (odd) = num2 (even) = 2
+</details>
